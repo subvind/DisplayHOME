@@ -73,7 +73,11 @@
     height: 100%;
     margin: auto;
     overflow: auto;
-    background: #000;
+    background: linear-gradient(
+      -90deg,
+      #000 0%,
+      #222 100%
+    );
   }
 
   .wrapper {
