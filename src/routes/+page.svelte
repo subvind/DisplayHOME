@@ -5,16 +5,14 @@
     <meta name="description" content="Websites are like sail boats. They require a main haul or backend API. They require a main mast or frontend interface. When put together and under the right wind-conditions/user-interations your boat/project can successfully navigate to it's destination." />
 </svelte:head>
 
-<div class="canvas">
+<div class="canvas hide-on-med-and-down">
   <div class="circles"></div>
 </div>
 
 <div class="wrapper">
-
-  <main>
     <div class="container">
-      <br />
-      <br />
+      <br class="hide-on-med-and-down" />
+      <br class="hide-on-med-and-down" />
       <br />
       <div class="row">
         <div class="col s12 m1">
@@ -55,15 +53,13 @@
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <br class="hide-on-med-and-down" />
+      <br class="hide-on-med-and-down" />
+      <br class="hide-on-med-and-down" />
+      <br class="hide-on-med-and-down" />
+      <br class="hide-on-med-and-down" />
+      <br class="hide-on-med-and-down" />
     </div>
-  
-  </main>
 </div>
 
 <style>
