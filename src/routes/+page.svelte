@@ -73,17 +73,7 @@
     height: 100%;
     margin: auto;
     overflow: auto;
-    background: linear-gradient(
-      -90deg,
-      #e3e5e8 0%,
-      #ebe4e3 10%,
-      #e4e1e0 25%,
-      #e5cee9 45%,
-      #e1b2db 60%,
-      #e5a2d4 75%,
-      #e282bb 85%,
-      #e8398e 100%
-    );
+    background: #000;
   }
 
   .wrapper {
@@ -143,7 +133,7 @@
     height: 500px;
     background: #001aff;
     bottom: -300px;
-    left: -100px;
+    left: -200px;
   }
 
   .canvas > .circles::before {
