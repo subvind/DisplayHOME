@@ -143,18 +143,18 @@
   .canvas > .circles {
     width: 500px;
     height: 500px;
-    background: #001aff;
+    background: #41A5F5;
     bottom: -300px;
     left: -200px;
   }
 
   .canvas > .circles::before {
-    background: #001aff;
+    background: #41A5F5;
     left: -40%;
   }
 
   .canvas > .circles::after {
-    background: #001aff;
+    background: #41A5F5;
     right: -20%;
   }
 
