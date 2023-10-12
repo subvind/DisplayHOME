@@ -10,14 +10,19 @@
 </div>
 
 <div class="wrapper">
-    <div class="container">
-      <br class="hide-on-med-and-down" />
+  <div class="container">
+    <br class="hide-on-med-and-down" />
       <br class="hide-on-med-and-down" />
       <br />
       <div class="row">
         <div class="col s12 m1">
         </div>
         <div class="col s12 m10">
+          <div style="text-align: center;">
+            <a href="/">
+              <img src="./anchor.png" alt="underwind.solutions" class="logo">
+            </a>
+          </div>
           <div class="card" style="width: 100%;">
             <div class="card-image">
               <img src="sailboat.jpg">
@@ -80,6 +85,13 @@
     /* position: relative;
     height: 100%;
     overflow: auto; */
+  }
+
+  .logo {
+    position: relative;
+    width: 10em;
+    margin-bottom: -5.5em;
+    z-index: 1;
   }
 
   .canvas::before,
