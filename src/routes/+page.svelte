@@ -53,7 +53,8 @@
                 underwind // subvind
             </div>
             <div class="card-action">
-              <a href="https://subvind.com">https://subvind.com</a>
+              <a href="https://subvind.com" class="btn black">portfolio</a>
+              <a href="https://istrav.com" class="btn black">website</a>
             </div>
           </div>
         </div>
