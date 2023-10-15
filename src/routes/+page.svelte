@@ -1,11 +1,15 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
+  let hostname = ''
+
   onMount(() => {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, {
       alignment: 'right'
     });
+
+		hostname = window.location.hostname
   })
 </script>
 
@@ -77,6 +81,14 @@
           </div>
         </div>
       </div>
+      <footer>
+        <p style="margin: 0;">
+          {hostname} © {new Date().getFullYear()}.
+        </p>
+        <p style="margin: 0;">
+          With ❤️ by Travis Burandt
+        </p>
+      </footer>
       <br class="hide-on-med-and-down" />
       <br class="hide-on-med-and-down" />
       <br class="hide-on-med-and-down" />
@@ -175,6 +187,11 @@
   .canvas > .circles::after {
     background: #41A5F5;
     right: -20%;
+  }
+
+  footer {
+    color: #aaa;
+    text-align: center;
   }
 
 </style>
