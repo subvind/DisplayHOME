@@ -77,6 +77,7 @@
             <div class="card-action">
               <a href="https://subvind.com" class="btn black">portfolio</a>
               <a href="https://istrav.com" class="btn black">website</a>
+              <a href="https://videos.istrav.com" class="btn black">videos</a>
               <a href="https://store.istrav.com" class="btn black">store</a>
               <a href="https://client-area.istrav.com" class="btn black">client area</a>
               <a href="https://entropy.underwind.solutions" class="btn black">entropy</a>
@@ -107,7 +108,7 @@
     width: 100%;
     height: 100%;
     margin: auto;
-    overflow: auto;
+    overflow-x: hidden;
     background: linear-gradient(
       -90deg,
       #000 0%,
