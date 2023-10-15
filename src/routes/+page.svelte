@@ -77,6 +77,9 @@
             <div class="card-action">
               <a href="https://subvind.com" class="btn black">portfolio</a>
               <a href="https://istrav.com" class="btn black">website</a>
+              <a href="https://store.istrav.com" class="btn black">store</a>
+              <a href="https://client-area.istrav.com" class="btn black">client area</a>
+              <a href="https://entropy.underwind.solutions" class="btn black">entropy</a>
             </div>
           </div>
         </div>
