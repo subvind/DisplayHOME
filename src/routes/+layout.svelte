@@ -10,7 +10,7 @@
   onMount(async () => {
     homeHostname = window.location.hostname
     if (homeHostname === 'localhost') {
-      homeHostname = 'www.subvind.com'
+      homeHostname = 'istrav.homenomy.subvind.com'
     }
     const response = await fetch(`https://api.subvind.com/organizations/homeHostname/${homeHostname}`, {
       method: 'GET',
