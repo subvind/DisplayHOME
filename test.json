@@ -1,0 +1,10 @@
+[
+  {"icon": "home", "name": "Homepage", "url": "https://underwind.solutions"},
+  {"icon": "business_center", "name": "Portfolio", "url": "https://subvind.com"},
+  {"icon": "public", "name": "Website", "url": "https://istrav.com"},
+  {"icon": "videocam", "name": "Videos", "url": "https://videos.istrav.com"},
+  {"icon": "shopping_cart", "name": "Store", "url": "https://store.istrav.com"},
+  {"icon": "verified_user", "name": "Client Area", "url": "https://client-area.istrav.com"},
+  {"icon": "all_inclusive", "name": "Entropy", "url": "https://entropy.underwind.solutions"},
+  {"icon": "local_phone", "name": "Contact Center", "url": "/contact-center"}
+]

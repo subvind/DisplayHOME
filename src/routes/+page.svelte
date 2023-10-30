@@ -1,7 +1,28 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  onMount(() => {
+  let organization: any;
+	let homeHostname: any = '';
+
+  onMount(async () => {
+    homeHostname = window.location.hostname
+    if (homeHostname === 'localhost') {
+      homeHostname = 'istrav.homenomy.subvind.com'
+    }
+    const response = await fetch(`https://api.subvind.com/organizations/homeHostname/${homeHostname}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+
+    if (response.ok) {
+      organization = await response.json();
+    } else {
+      const errorData = await response.json();
+      alert(errorData.error);
+    }
+
     var elems = document.querySelectorAll('.dropdown-trigger2');
     var instances = M.Dropdown.init(elems, {
       alignment: 'right'
@@ -40,39 +61,18 @@
           <li><a href="https://twitter.com/BurandtTravis" target="_blank">Twitter</a></li>
           <li><a href="https://github.com/subvind" target="_blank">GitHub</a></li>
         </ul>
-
         <div class="card-content">
-          Hello There!
-          <br />
-          Thank you for taking the time in reviewing us for your consideration.
-          <br />
-          <br />
-          Websites are like sail boats. They require a main haul or backend API. They require a main mast or frontend interface. When put together and under the right wind-conditions/user-interations your boat/project can successfully navigate to it's destination.
-          <br />
-          <blockquote cite="">
-            <a href="https://underwind.solutions">https://underwind.solutions</a>
-          </blockquote>
-          Say hello to underwind.solutions: where your project is not just another website; because we treat your project as if it were a high end yacht. We're not as expensive as you might think though, as we only charge per request. So no wind-under-you-sails/user-interactions then no movement/charge.
-          <br />
-          <br />
-          Therefore, the better user experience we create, the more user-interactions your website will get, thus the more profit we can both make. 
-          <br />
-          <br />
-          A wind wind situation :)
-          <br />
-          <br />
-          kind regards,
-          <br />
-          underwind // subvind
+          {#if organization}
+            {@html organization.about}
+          {/if}
         </div>
-        <div class="card-action">
-          <a href="https://subvind.com" class="btn black">portfolio</a>
-          <a href="https://istrav.com" class="btn black">website</a>
-          <a href="https://videos.istrav.com" class="btn black">videos</a>
-          <a href="https://store.istrav.com" class="btn black">store</a>
-          <a href="https://client-area.istrav.com" class="btn black">client area</a>
-          <a href="https://entropy.underwind.solutions" class="btn black">entropy</a>
-        </div>
+        {#if organization && organization.menu}
+          <div class="card-action">
+            {#each organization.menu as menu}
+              <a href={menu.url} class="btn black menu">{menu.name}</a>
+            {/each}
+          </div>
+        {/if}
       </div>
     </div>
   </div>
@@ -84,5 +84,9 @@
     width: 10em;
     margin-bottom: -5.5em;
     z-index: 1;
+  }
+
+  .menu {
+    margin: 0.5em 1em 0.5em 0;
   }
 </style>
