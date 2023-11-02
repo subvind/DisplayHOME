@@ -96,7 +96,7 @@
 							</div>
 						</li>
 					</ul>
-				</li>			
+				</li>
 			</ul>
 			{#if organization}
 				<a href="#" data-target="slide-out" class="brand-logo sidenav-trigger left"><i class="material-icons">menu</i>{organization.displayName}</a>
