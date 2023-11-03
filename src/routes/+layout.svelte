@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import Header from "$lib/Header.svelte"
+  import { HeaderDefault } from "subvind-components"
   import Footer from "$lib/Footer.svelte"
 
   let organization: any;
@@ -34,7 +34,7 @@
 
 <div class="wrapper">
   {#if organization}
-    <Header organization={organization} />
+    <HeaderDefault organization={organization} />
   {:else}
     <nav class="grey darken-3">
       <div class="nav-wrapper">
