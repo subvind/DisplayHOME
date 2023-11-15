@@ -29,3 +29,9 @@
 <br />
 <br />
 <AuthAccountRegister organization={organization} />
+
+<style>
+  :global(body) {
+    background: #eee !important;
+  }
+</style>
