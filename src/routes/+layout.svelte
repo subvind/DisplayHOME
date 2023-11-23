@@ -44,7 +44,7 @@
 
   <slot />
 
-  <Footer />
+  <Footer organization={organization} />
 </div>
 
 <style>

@@ -3,6 +3,8 @@
 
   let organization: any;
 	let homeHostname: any = '';
+  let description: string;
+  let about: string;
 
   onMount(async () => {
     homeHostname = window.location.hostname
@@ -32,12 +34,24 @@
 		gtag('event', 'pageview', {
 			'organizationId': organization.id
 		});
+
+    // remove html from text
+    var html = organization.description;
+    var html2 = organization.about;
+    var div = document.createElement("div");
+    var div2 = document.createElement("div");
+    div.innerHTML = html;
+    div2.innerHTML = html2;
+    description = div.textContent || div.innerText || "";
+    about = div2.textContent || div2.innerText || "";
   })
 </script>
 
 <svelte:head>
-  <title>underwind.solutions</title> 
-  <meta name="description" content="Websites are like sail boats. They require a main haul or backend API. They require a main mast or frontend interface. When put together and under the right wind-conditions/user-interations your boat/project can successfully navigate to it's destination." />
+  {#if organization}
+    <title>{organization.displayName} - {description}</title> 
+  {/if}
+  <meta name="description" content={about} />
 </svelte:head>
 
 <div class="container">
@@ -50,13 +64,19 @@
     <div class="col s12 m10">
       <div style="text-align: center;">
         <a href="/">
-          <img src="./anchor.png" alt="underwind.solutions" class="logo">
+          {#if organization}
+            {#if organization.orgPhoto}
+              <img src={`https://s3.us-east-2.amazonaws.com/${organization.orgname}.${organization.orgPhoto.bucket.name}/${organization.orgPhoto.filename}`} alt="logo" class="logo">
+            {:else}
+              <img src="/anchor.png" alt="logo" class="logo">
+            {/if}
+          {/if}
         </a>
       </div>
       <div class="card" style="width: 100%;">
         <div class="card-image">
           <img src="sailboat.jpg">
-          <span class="card-title">underwind.solutions</span>
+          <span class="card-title">{window.location.hostname}</span>
         </div>
         <a class="dropdown-trigger2 btn-floating btn-large waves-effect waves-light black right" style="margin: -2em 2em 0 0;" href='#' data-target='dropdown0'><i class="material-icons">share</i></a>
 
