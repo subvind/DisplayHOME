@@ -75,7 +75,13 @@
       </div>
       <div class="card" style="width: 100%;">
         <div class="card-image">
-          <img src="sailboat.jpg">
+          {#if organization}
+            {#if organization.splashPhoto}
+              <img src={`https://s3.us-east-2.amazonaws.com/${organization.orgname}.${organization.splashPhoto.bucket.name}/${organization.splashPhoto.filename}`} alt="splash">
+            {:else}
+              <img src="sailboat.jpg" alt="splash">
+            {/if}
+          {/if}
           <span class="card-title">{window.location.hostname}</span>
         </div>
         <a class="dropdown-trigger2 btn-floating btn-large waves-effect waves-light black right" style="margin: -2em 2em 0 0;" href='#' data-target='dropdown0'><i class="material-icons">share</i></a>
