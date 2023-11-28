@@ -79,7 +79,7 @@
             {#if organization.splashPhoto}
               <img src={`https://s3.us-east-2.amazonaws.com/${organization.orgname}.${organization.splashPhoto.bucket.name}/${organization.splashPhoto.filename}`} alt="splash">
             {:else}
-              <img src="sailboat.jpg" alt="splash">
+              <div class="banner"></div>
             {/if}
           {/if}
           <span class="card-title">{window.location.hostname}</span>
@@ -119,5 +119,14 @@
 
   .menu {
     margin: 0.5em 1em 0.5em 0;
+  }
+  
+  .banner {
+    height: 300px;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: linear-gradient(30deg,#9b9b9b 12%,transparent 12.5%,transparent 87%,#9b9b9b 87.5%,#9b9b9b),linear-gradient(150deg,#9b9b9b 12%,transparent 12.5%,transparent 87%,#9b9b9b 87.5%,#9b9b9b),linear-gradient(30deg,#9b9b9b 12%,transparent 12.5%,transparent 87%,#9b9b9b 87.5%,#9b9b9b),linear-gradient(150deg,#9b9b9b 12%,transparent 12.5%,transparent 87%,#9b9b9b 87.5%,#9b9b9b),linear-gradient(60deg,#9b9b9b77 25%,transparent 25.5%,transparent 75%,#9b9b9b77 75%,#9b9b9b77),linear-gradient(60deg,#9b9b9b77 25%,transparent 25.5%,transparent 75%,#9b9b9b77 75%,#9b9b9b77);
+    background-size: 80px 140px;
+    background-position: 0 0,0 0,40px 70px,40px 70px,0 0,40px 70px;
   }
 </style>
