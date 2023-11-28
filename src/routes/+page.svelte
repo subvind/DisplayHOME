@@ -129,4 +129,8 @@
     background-size: 80px 140px;
     background-position: 0 0,0 0,40px 70px,40px 70px,0 0,40px 70px;
   }
+
+  .card-title {
+    text-shadow: -2px 1px black
+  }
 </style>
