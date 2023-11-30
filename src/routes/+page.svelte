@@ -88,9 +88,23 @@
 
         <!-- Dropdown Structure -->
         <ul id='dropdown0' class='dropdown-content' style="width: 200px;">
-          <li><a href="https://www.youtube.com/channel/UCwcibF78LrLQBpfvlApvgKg" target="_blank">YouTube</a></li>
-          <li><a href="https://twitter.com/BurandtTravis" target="_blank">Twitter</a></li>
-          <li><a href="https://github.com/subvind" target="_blank">GitHub</a></li>
+          {#if organization}
+            {#if organization.ebayUser}
+              <li><a href={`https://www.ebay.com/usr/${organization.ebayUser}`} target="_blank">eBay</a></li>
+            {/if}
+            {#if organization.etsyShop}
+              <li><a href={`https://www.etsy.com/shop/${organization.etsyShop}`} target="_blank">etsy</a></li>
+            {/if}
+            {#if organization.youtubeChannel}
+              <li><a href={`https://www.youtube.com/${organization.youtubeChannel}`} target="_blank">YouTube</a></li>
+            {/if}
+            {#if organization.twitterUser}
+              <li><a href={`https://twitter.com/${organization.twitterUser}`} target="_blank">Twitter</a></li>
+            {/if}
+            {#if organization.githubUser}
+              <li><a href={`https://github.com/${organization.githubUser}`} target="_blank">GitHub</a></li>
+            {/if}
+          {/if}
         </ul>
         <div class="card-content">
           {#if organization}
