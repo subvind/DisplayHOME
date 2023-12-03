@@ -111,7 +111,7 @@
             {@html organization.about}
           {/if}
         </div>
-        {#if organization && organization.menu}
+        {#if organization && organization.menu && organization.menu.length}
           <div class="card-action">
             {#each organization.menu as menu}
               <a href={menu.url} class="btn black menu">{menu.name}</a>
