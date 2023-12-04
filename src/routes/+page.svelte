@@ -1,6 +1,15 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
+  import 'bytemd/dist/index.css'
+  import { Editor, Viewer } from 'bytemd'
+  import gfm from '@bytemd/plugin-gfm'
+
+  const plugins = [
+    gfm(),
+    // Add more plugins here
+  ]
+
   let organization: any;
 	let homeHostname: any = '';
   let description: string;
@@ -73,7 +82,7 @@
           {/if}
         </a>
       </div>
-      <div class="card" style="width: 100%;">
+      <div class="card z-depth-5" style="width: 100%;">
         <div class="card-image">
           {#if organization}
             {#if organization.splashPhoto}
@@ -108,7 +117,7 @@
         </ul>
         <div class="card-content">
           {#if organization}
-            {@html organization.about}
+            <Viewer value={organization.about} {plugins} />
           {/if}
         </div>
         {#if organization && organization.menu && organization.menu.length}
