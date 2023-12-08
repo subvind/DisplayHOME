@@ -99,7 +99,7 @@
 						<p>{@html organization.description}</p>
 					</div>
 					<div class="card-action">
-						<a href={`https://${organization.homeHostname}/organizations`} target="_blank">{organization.homeHostname}</a>
+						<a href={`https://${organization.homeHostname}`}>HOMEPAGE</a>
 					</div>
 				</div>
 			</div>
