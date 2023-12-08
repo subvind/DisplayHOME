@@ -138,4 +138,12 @@
     right: -20%;
   }
 
+  :global(.no-splash .canvas) {
+    display: none !important;
+  }
+
+  :global(body.no-splash) {
+		background: #ddd;
+		color: #000;
+  }
 </style>

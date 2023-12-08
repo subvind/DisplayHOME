@@ -20,10 +20,13 @@
 <br class="hide-on-med-and-down" />
 <br class="hide-on-med-and-down" />
 
-
 <style>
   footer {
     color: #aaa;
     text-align: center;
+  }
+
+  :global(.no-splash footer) {
+    color: #111;
   }
 </style>
