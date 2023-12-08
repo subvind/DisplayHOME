@@ -132,7 +132,7 @@
 								<p>{@html org.description}</p>
 							</div>
 							<div class="card-action">
-								<a href={`https://${org.homeHostname}/organizations`} target="_blank">{org.homeHostname}</a>
+								<a href={`https://${org.homeHostname}/organizations`}>{org.homeHostname}</a>
 							</div>
 						</div>
 					{/each}
