@@ -38,12 +38,15 @@
 
 <svelte:head>
 	{#if organization}
-		<title>Privacy Policy - {organization.displayName}</title>
+		<title>Dashboard - {organization.displayName}</title>
 	{/if}
-	<meta name="description" content="About this app" />
+	<meta name="description" content="A wind wind situation :)" />
 </svelte:head>
 
-<iframe src="https://dashboard.underwind.solutions/public-dashboards/d9c9ca81b1c64ea4ad09c8e13f621cdb" sandbox="allow-same-origin allow-scripts" frameborder="0"></iframe>
+<iframe src="https://dashboard.underwind.solutions/public-dashboards/23f9f9e2ea934bddb53e69e2f1ed6864" sandbox="allow-same-origin allow-scripts" frameborder="0"></iframe>
+
+<br />
+<br />
 
 <style>
 	iframe {
